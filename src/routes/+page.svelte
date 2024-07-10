@@ -91,7 +91,7 @@
 				<img
 					src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.url.split('/')[6]}.png`}
 					alt={pokemon.name}
-					class="mx-auto"
+					class="mx-auto transition-transform duration-500 ease-in-out hover:scale-110"
 				/>
 				<h3 class="text-lg font-semibold text-start">
 					{pokemon.url.split('/')[6]}
@@ -123,7 +123,7 @@
 
 {#if showModal && selectedPokemon}
     <div class="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-black bg-opacity-50">
-        <div class="relative w-full max-w-md p-8 bg-white rounded-lg">
+        <div class="relative w-3/4 max-w-md p-8 bg-white rounded-lg">
             <button 
                 class="absolute text-gray-600 top-2 right-2 hover:text-gray-800"
                 on:click={closeModal}
@@ -139,7 +139,7 @@
             <img 
                 src={selectedPokemon.sprites.other['official-artwork'].front_default} 
                 alt={selectedPokemon.name}
-                class="w-48 h-48 mx-auto mb-4"
+                class="w-48 h-48 mx-auto mb-4 transition-transform duration-500 ease-in-out hover:scale-110"
             />
             <div class="grid grid-cols-2 gap-2">
                 <p><strong>Height:</strong> {selectedPokemon.height / 10} m</p>
