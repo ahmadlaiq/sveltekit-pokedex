@@ -78,8 +78,8 @@
 		<div class="flex justify-center mb-3">
 			<input
 				type="text"
-				class="w-3/4 px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-				placeholder="Search Pokémon by name or number..."
+				class="w-3/4 px-3 py-2 leading-tight text-gray-700 border border-gray-400 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+				placeholder="Search Pokémon..."
 				bind:value={searchTerm}
 				on:input={debouncedSearch}
 			/>
